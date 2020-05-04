@@ -1,16 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
+import Img from "gatsby-image";
 
-import '../style/index.scss'
+import "../style/index.scss";
 
 const Layout = ({ children, site }) => (
   <div>
     <Helmet title="East One Coffee Roasters" />
     <div className="Container">
       <div className="Header">
-        <div className="Wrap" >
+        <div className="Wrap">
           <div className="Header__body">
             {/* <h1 className="Header__title">
               <Link data-text={site.siteMetadata.siteName} to="/">
@@ -18,9 +18,7 @@ const Layout = ({ children, site }) => (
               </Link>
             </h1> */}
             <div className="Header__summary snipcart-summary snipcart-checkout">
-              <div className="Header__summary__title">
-                {/* 🛍 MY CART 🛍 */}
-              </div>
+              <div className="Header__summary__title">{/* 🛍 MY CART 🛍 */}</div>
               <div className="Header__summary__line">
                 {/* Number of items: <span className="snipcart-total-items"></span> */}
               </div>
@@ -31,20 +29,18 @@ const Layout = ({ children, site }) => (
           </div>
         </div>
       </div>
-      <div className="Wrap" >
-        {children}
-      </div>
-      <div className="Wrap" >
+      <div className="Wrap">{children}</div>
+      <div className="Wrap">
         <div className="Footer">
-        Copyright 2016-2020 East One Coffee Roasters
+          Copyright 2016-2020 East One Coffee Roasters
         </div>
       </div>
     </div>
   </div>
-)
+);
 
 Layout.propTypes = {
-  children: PropTypes.func,
-}
+  children: PropTypes.func
+};
 
-export default Layout
+export default Layout;
