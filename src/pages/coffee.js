@@ -43,34 +43,37 @@ export default () => (
             {
                 data.products.edges.map(({ node: product }) => (
                 <div className="Catalogue__item" key={product.id}>
-                    <div
-                    className="Product snipcart-add-item"
-                    data-item-id={product.id}
-                    data-item-name={product.name}
-                    data-item-price={product.price}
-                    data-item-country={product.country}
-                    data-item-region={product.region}
-                    data-item-producer={product.producer}
-                    data-item-elevation={product.elevation}
-                    data-item-processing={product.processing}
-                    data-item-varietal={product.varietal}
-                    data-item-cropYear={product.cropYear}
-                    data-item-notes={product.notes}
-                    data-item-image={product.image.url}
-                    data-item-url={`/`}
-                    >
+                  <div>
                     <div className="Product__image">
                         <Img sizes={product.image.sizes} />
-                    </div> <div className="Product__details">
+                    </div> 
+                    <div className="Product__details">
                         <div className="Product__name">
                         {product.name}
-                        <div className="Product__price">
-                            ${product.price}
+                          <div className="Product__price">
+                             ${product.price}
+                          </div>
                         </div>
-                        </div>
-                        <span className="Product__buy">Buy now</span>
+                        <button
+                          className="Product__buy Product snipcart-add-item"
+                          data-item-id={product.id}
+                          data-item-name={product.name}
+                          data-item-price={product.price}
+                          data-item-country={product.country}
+                          data-item-region={product.region}
+                          data-item-producer={product.producer}
+                          data-item-elevation={product.elevation}
+                          data-item-processing={product.processing}
+                          data-item-varietal={product.varietal}
+                          data-item-cropYear={product.cropYear}
+                          data-item-notes={product.notes}
+                          data-item-image={product.image.url}
+                          data-item-url={`/`} 
+                        >
+                          Add to cart   
+                        </button>
                     </div>
-                    </div>
+                  </div>
                 </div>
                 ))
             }
