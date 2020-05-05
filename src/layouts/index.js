@@ -1,46 +1,56 @@
 import React from "react";
+import { StaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
+import Header from "../components/header";
 
 import "../style/index.scss";
 
-const Layout = ({ children, site }) => (
-  <div>
-    <Helmet title="East One Coffee Roasters" />
-    <div className="Container">
-      <div className="Header">
-        <div className="Wrap">
-          <div className="Header__body">
-            {/* <h1 className="Header__title">
-              <Link data-text={site.siteMetadata.siteName} to="/">
-                {site.siteMetadata.siteName}
-              </Link>
-            </h1> */}
-            <div className="Header__summary snipcart-summary snipcart-checkout">
-              <div className="Header__summary__title">{/* 🛍 MY CART 🛍 */}</div>
-              <div className="Header__summary__line">
-                {/* Number of items: <span className="snipcart-total-items"></span> */}
-              </div>
-              <div className="Header__summary__line">
-                {/* Total price: <span className="snipcart-total-price"></span> */}
-              </div>
-            </div>
-          </div>
+const Layout = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+            menuLinks {
+              name
+              link
+            }
+          }
+        }
+      }
+    `}
+    render={(data) => (
+      <React.Fragment>
+        <Helmet title="East One Coffee Roasters" />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          menuLinks={data.site.siteMetadata.menuLinks}
+        />
+        <div
+          style={{
+            margin: "0 auto",
+            maxWidth: 960,
+            padding: "0px 1.0875rem 1.45rem",
+            paddingTop: 0,
+          }}
+          // className="Wrap"
+        >
+          {children}
         </div>
-      </div>
-      <div className="Wrap">{children}</div>
-      <div className="Wrap">
+        <div className="Wrap"></div>
         <div className="Footer">
           Copyright 2016-2020 East One Coffee Roasters
         </div>
-      </div>
-    </div>
-  </div>
+      </React.Fragment>
+    )}
+  />
 );
 
 Layout.propTypes = {
-  children: PropTypes.func
+  children: PropTypes.func,
 };
 
 export default Layout;
