@@ -5,7 +5,8 @@ import { Link } from "gatsby";
 const Header = ({ siteTitle, menuLinks }) => (
   <header
     style={{
-      marginBottom: "1.45rem",
+      marginTop: "3rem",
+      marginBottom: "7.5rem",
     }}
   >
     <div
@@ -23,15 +24,21 @@ const Header = ({ siteTitle, menuLinks }) => (
           alignItems: "center",
         }}
       >
-        <h1 style={{ margin: 0, flex: 1 }}>
+        <h1>
           <Link
             to="/"
             style={{
               color: "black",
               textDecoration: "none",
+              marginRight: "2rem",
             }}
           >
-            {siteTitle}
+            <img
+              src="https://secureservercdn.net/166.62.107.20/81r.496.myftpupload.com/wp-content/uploads/2017/09/square.png"
+              alt="East One logo"
+              width="50px"
+              height="50px"
+            />
           </Link>
         </h1>
         <div>
@@ -43,6 +50,8 @@ const Header = ({ siteTitle, menuLinks }) => (
                   style={{
                     listStyleType: `none`,
                     padding: `1rem`,
+                    textTransform: "uppercase",
+                    fontWeight: 700,
                   }}
                 >
                   <Link
