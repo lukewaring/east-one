@@ -10,7 +10,7 @@ import "../style/index.scss";
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query SiteQuery {
         site {
           siteMetadata {
             title
@@ -24,26 +24,16 @@ const Layout = ({ children }) => (
     `}
     render={(data) => (
       <React.Fragment>
-        <Helmet title="East One Coffee Roasters" />
+        <Helmet title={data.site.siteMetadata.title} />
         <Header
           siteTitle={data.site.siteMetadata.title}
           menuLinks={data.site.siteMetadata.menuLinks}
         />
-        <div
-          style={{
-            margin: "0 auto",
-            maxWidth: 960,
-            padding: "0px 1.0875rem 1.45rem",
-            paddingTop: 0,
-          }}
-          // className="Wrap"
-        >
-          {children}
-        </div>
+        <div>{children}</div>
         <div className="Wrap"></div>
-        <div className="Footer">
+        {/* <div className="Footer">
           Copyright 2016-2020 East One Coffee Roasters
-        </div>
+        </div> */}
       </React.Fragment>
     )}
   />

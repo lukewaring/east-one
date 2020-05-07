@@ -1,46 +1,68 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import Layout from "../layouts/index";
-// import Img from "gatsby-image";
+import Img from "gatsby-image";
+import "../style/index.scss";
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query SiteQuery {
-        site {
-          siteMetadata {
-            siteName
+function IndexPage() {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { regex: "/cafe/" }) {
+        childImageSharp {
+          fluid(maxWidth: 700) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
-    `}
-    render={(data) => (
-      <Layout site={data.site}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "auto auto",
-            gridGap: "300px",
-          }}
-        >
-          <div style={{ gridColumn: "1 / 1", textAlign: "center" }}>
-            <br></br>
-            <p>BUY COFFEE</p>
-            <p>ORDER DELIVERY/PICKUP</p>
-            <br></br>
-            <p>Watch our Social Media for updates daily!</p>
-            <a href="https://www.instagram.com/eastonecoffee/" target="_">
-              @eastonecoffee
-            </a>
-          </div>
-          <img
-            src="https://secureservercdn.net/166.62.107.20/81r.496.myftpupload.com/wp-content/uploads/2018/03/BBeastone_002.jpg"
-            alt="cafe storefront"
-            width="700px"
-            height="500px"
-          />
+    }
+  `);
+  return (
+    <Layout>
+      <div className="gridContainer">
+        <div className="gridItem1">
+          <br></br>
+          <br></br>
+          <br></br>
+          <a href="/coffee">BUY COFFEE</a>
+          <br></br>
+          <br></br>
+          <a href="https://www.trycaviar.com/m/east-one-coffee-roasters-6537">
+            ORDER DELIVERY/PICKUP
+          </a>
+          <br></br>
+          <br></br>
+          <br></br>
+          <p>Watch our Social Media for updates daily!</p>
+          <br></br>
+          <a href="https://www.instagram.com/eastonecoffee/">@eastonecoffee</a>
         </div>
-      </Layout>
-    )}
-  />
-);
+        <Img
+          fluid={data.file.childImageSharp.fluid}
+          alt="cafe storefront"
+          className="gridItem2"
+        />
+      </div>
+      <div className="indexFooter">
+        <p>
+          East One is still open at both Carroll Gardens and Chelsea for Take
+          out and delivery. (Delivery links:{" "}
+          <a href="https://www.trycaviar.com/m/east-one-coffee-roasters-6537">
+            Carroll Gardens
+          </a>{" "}
+          /{" "}
+          <a href="https://www.trycaviar.com/m/east-one-coffee-roasters--chelsea-15283">
+            Chelsea
+          </a>
+          )
+        </p>
+        <br></br>
+        <p>Carroll Gardens: 8am – 5pm (kitchen till 3pm)</p>
+        <br></br>
+        <p>Chelsea: 8am – 4pm</p>
+        <br></br>
+      </div>
+    </Layout>
+  );
+}
+
+export default IndexPage;

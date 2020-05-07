@@ -37,5 +37,13 @@ module.exports = {
         autopop: false,
       },
     },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images/`,
+      },
+    },
   ],
 };
