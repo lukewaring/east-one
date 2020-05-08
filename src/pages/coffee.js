@@ -3,6 +3,8 @@ import { StaticQuery, graphql } from "gatsby";
 import Layout from "../layouts/index";
 import Img from "gatsby-image";
 
+import "../style/snipcart.scss";
+
 export default () => (
   <StaticQuery
     query={graphql`
@@ -23,27 +25,22 @@ export default () => (
               notes
               image {
                 url
-                sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
+                sizes(maxWidth: 150, imgixParams: { fm: "jpg" }) {
                   ...GatsbyDatoCmsSizes
                 }
               }
             }
           }
         }
-        site {
-          siteMetadata {
-            siteName
-          }
-        }
       }
     `}
-    render={data => (
-      <Layout site={data.site}>
+    render={(data) => (
+      <Layout>
         <div className="Catalogue">
           {data.products.edges.map(({ node: product }) => (
             <div className="Catalogue__item" key={product.id}>
               <div>
-                <div className="Product__image">
+                <div>
                   <Img sizes={product.image.sizes} />
                 </div>
                 <div className="Product__details">
@@ -62,7 +59,7 @@ export default () => (
                     data-item-elevation={product.elevation}
                     data-item-processing={product.processing}
                     data-item-varietal={product.varietal}
-                    data-item-cropYear={product.cropYear}
+                    data-item-cropYear={product.cropyear}
                     data-item-notes={product.notes}
                     data-item-image={product.image.url}
                     data-item-url={`/`}

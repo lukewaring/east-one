@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import "../style/Header.scss";
@@ -40,13 +39,5 @@ function Header({ menuLinks }) {
     </header>
   );
 }
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
-};
 
 export default Header;
