@@ -6,12 +6,6 @@
 
 @import "snipcart";
 
-body {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  color: #828282;
-}
-
 a,
 a:visited {
   color: inherit;
@@ -19,9 +13,13 @@ a:visited {
 }
 
 .gridContainer {
+  color: #828282;
   display: grid;
   grid-template-columns: 50% 50%;
+  margin-top: 7.3rem;
   margin-bottom: 10rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
 }
 
 .gridItem1 {

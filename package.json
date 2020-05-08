@@ -1,8 +1,8 @@
 {
-  "name": "datocms-snipcart-gatsby-example",
-  "description": "An example project to demonstrate how you can integrate Gatsby, Snipcart and DatoCMS",
+  "name": "east-one",
+  "description": "E-commerce site for East One Coffee Roasters",
   "version": "1.0.0",
-  "author": "Stefano Verna <s.verna@datocms.com>",
+  "author": "Luke Waring",
   "dependencies": {
     "dotenv": "^8.2.0",
     "gatsby": "^2.20.17",

@@ -3,8 +3,6 @@ import { StaticQuery, graphql } from "gatsby";
 import Layout from "../layouts/index";
 import Img from "gatsby-image";
 
-import "../style/snipcart.scss";
-
 export default () => (
   <StaticQuery
     query={graphql`
@@ -32,10 +30,18 @@ export default () => (
             }
           }
         }
+        file(relativePath: { regex: "/coffee/" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     `}
     render={(data) => (
       <Layout>
+        <div id="banner">Coffee</div>
         <div className="Catalogue">
           {data.products.edges.map(({ node: product }) => (
             <div className="Catalogue__item" key={product.id}>

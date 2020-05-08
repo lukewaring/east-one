@@ -1,5 +1,5 @@
 .Catalogue {
-  // margin: 16vh 0;
+  margin: 16vh 0;
   margin-left: 11rem;
   margin-right: 11rem;
 }
@@ -30,4 +30,22 @@
   .Catalogue__item {
     width: 28%;
   }
+}
+
+#banner {
+  background-image: url(coffee-plant.jpg);
+  height: 325px;
+  background-position: center;
+  background-size: 100%;
+  text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: #ffffff;
+  letter-spacing: -0.05em;
+  line-height: 85px;
+  font-size: 65px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
