@@ -1,7 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image";
-import "../style/Header.scss";
 
 function Header({ menuLinks }) {
   const data = useStaticQuery(graphql`
@@ -36,6 +35,14 @@ function Header({ menuLinks }) {
           ))}
         </ul>
       </nav>
+
+      <div className="cart snipcart-summary snipcart-checkout">
+        <span>
+          🛒
+          <span> </span>
+          <span className="snipcart-total-items"></span>
+        </span>
+      </div>
     </header>
   );
 }

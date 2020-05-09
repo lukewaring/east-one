@@ -1,6 +1,6 @@
 .snip-layout.snip-layout {
   * {
-    font-family: consolas, Menlo, monospace, sans-serif;
+    font-family: sans-serif;
   }
 
   .snip-product__name {
@@ -8,7 +8,7 @@
   }
 
   .snip-header {
-    background: #663399;
+    background: black;
   }
 
   .snip-layout__main-container {
@@ -19,4 +19,12 @@
   .snip-header__total {
     border-radius: 0;
   }
+}
+
+#snipcart-footer {
+  background: black;
+}
+
+#snipcart-header-total {
+  background: black;
 }

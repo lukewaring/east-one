@@ -3,6 +3,10 @@
   margin-bottom: 2.4rem;
   margin-left: 15.75rem;
   display: flex;
+  // position: sticky;
+  // top: 0;
+  // background-color: white;
+  // z-index: 1;
 }
 
 .ul {
@@ -22,4 +26,10 @@
 
 .logo {
   margin-right: 2.25rem;
+}
+
+.cart {
+  position: absolute;
+  right: 17rem;
+  top: 3.2rem;
 }
