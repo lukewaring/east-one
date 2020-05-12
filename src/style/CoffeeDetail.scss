@@ -2,23 +2,47 @@
   text-align: center;
   color: #4a4f6a;
   font-weight: 400;
-  font-size: 3.125rem;
-  line-height: 1.4;
+  font-size: 65px;
+  line-height: 85px;
   padding-top: 5rem;
+  letter-spacing: -0.05em;
+}
+
+.CoffeeDetailPrice {
+  color: #4a4f6a;
+  font-weight: 400;
+  font-size: 2.25em;
+  letter-spacing: -0.05em;
 }
 
 .CoffeeDetailContainer {
   display: grid;
-  grid-template-columns: auto auto auto;
-  padding-top: 3rem;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  padding-top: 2rem;
   padding-right: 10rem;
   padding-left: 10rem;
+  color: #828282;
 }
 
-// .CoffeeDetailHeader {
-//   grid-column-start: 4 span 1;
-// }
+.CoffeeDetailImg {
+  grid-column-start: 4;
+}
 
-// .CoffeeDetailDetails {
-//   //   grid-column-start: 4 span 1;
-// }
+.CoffeeDetailDetails {
+  grid-column-start: 5;
+}
+
+.CoffeeDetail__buy {
+  flex: 1;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #6a6a6a;
+  padding: 20px 60px;
+  color: white;
+  position: relative;
+  font-weight: bold;
+}
+
+.CoffeeDetail__buy:hover {
+  background-color: black;
+}
