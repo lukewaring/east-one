@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { graphql } from "gatsby";
 import Layout from "../layouts/index";
 import Img from "gatsby-image";
@@ -35,34 +35,55 @@ export default function(context) {
   return (
     <Layout>
       <h1 className="CoffeeDetailTitle">
-        {data.name} — {data.country}
+        {data.country ? `${data.name} — ${data.country}` : `${data.name}`}
       </h1>
       <div className="CoffeeDetailContainer">
         <Img className="CoffeeDetailImg" fixed={data.image.fixed} />
         <div className="CoffeeDetailDetails">
           <h2 className="CoffeeDetailPrice">${data.price}</h2>
           <br></br>
-          <p1>Region: {data.region}</p1>
-          <br></br>
-          <br></br>
-          <p1>Producer: {data.producer}</p1>
-          <br></br>
-          <br></br>
-          <p1>Elevation: {data.elevation}</p1>
-          <br></br>
-          <br></br>
-          <p1>Process: {data.processing}</p1>
-          <br></br>
-          <br></br>
-          <p1>Varietal: {data.varietal}</p1>
-          <br></br>
-          <br></br>
-          <p1>Crop Year: {data.cropYear}</p1>
-          <br></br>
-          <br></br>
-          <p1>{data.notes}</p1>
-          <br></br>
-          <br></br>
+          {data.region ? (
+            <Fragment>
+              <p>Region: {data.region}</p>
+              <br></br>
+            </Fragment>
+          ) : null}
+          {data.producer ? (
+            <Fragment>
+              <p>Producer: {data.producer}</p>
+              <br></br>
+            </Fragment>
+          ) : null}
+          {data.elevation ? (
+            <Fragment>
+              <p>Elevation: {data.elevation}</p>
+              <br></br>
+            </Fragment>
+          ) : null}
+          {data.processing ? (
+            <Fragment>
+              <p>Process: {data.processing}</p>
+              <br></br>
+            </Fragment>
+          ) : null}
+          {data.varietal ? (
+            <Fragment>
+              <p>Varietal: {data.varietal}</p>
+              <br></br>
+            </Fragment>
+          ) : null}
+          {data.cropYear ? (
+            <Fragment>
+              <p>Crop Year: {data.cropYear}</p>
+              <br></br>
+            </Fragment>
+          ) : null}
+          {data.notes ? (
+            <Fragment>
+              <p>{data.notes}</p>
+              <br></br>
+            </Fragment>
+          ) : null}
           <button
             className="CoffeeDetail__buy Product snipcart-add-item"
             data-item-id={data.id}

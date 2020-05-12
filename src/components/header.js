@@ -39,8 +39,8 @@ function Header({ menuLinks }) {
       <div className="cart snipcart-summary snipcart-checkout">
         <span>
           🛒
-          <span> </span>
-          <span className="snipcart-total-items"></span>
+          {/* <span> </span>
+          <span className="snipcart-total-items"></span> */}
         </span>
       </div>
     </header>
