@@ -1,0 +1,24 @@
+.CoffeeDetailTitle {
+  text-align: center;
+  color: #4a4f6a;
+  font-weight: 400;
+  font-size: 3.125rem;
+  line-height: 1.4;
+  padding-top: 5rem;
+}
+
+.CoffeeDetailContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 3rem;
+  padding-right: 10rem;
+  padding-left: 10rem;
+}
+
+// .CoffeeDetailHeader {
+//   grid-column-start: 4 span 1;
+// }
+
+// .CoffeeDetailDetails {
+//   //   grid-column-start: 4 span 1;
+// }

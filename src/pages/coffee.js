@@ -1,5 +1,5 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql, Link } from "gatsby";
 import Layout from "../layouts/index";
 import Img from "gatsby-image";
 
@@ -27,6 +27,7 @@ export default () => (
                   ...GatsbyDatoCmsSizes
                 }
               }
+              slug
             }
           }
         }
@@ -47,7 +48,9 @@ export default () => (
             <div className="Catalogue__item" key={product.id}>
               <div>
                 <div>
-                  <Img sizes={product.image.sizes} />
+                  <Link to={`coffee/${product.slug}`}>
+                    <Img sizes={product.image.sizes} />
+                  </Link>
                 </div>
                 <div className="Product__details">
                   <div className="Product__name">
