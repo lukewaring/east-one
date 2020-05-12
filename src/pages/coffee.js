@@ -71,7 +71,7 @@ export default () => (
                     data-item-cropYear={product.cropyear}
                     data-item-notes={product.notes}
                     data-item-image={product.image.url}
-                    data-item-url={`/`}
+                    data-item-url="https://east-one.netlify.app/coffee"
                   >
                     Add to cart
                   </button>
