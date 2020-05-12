@@ -20,6 +20,7 @@ export const query = graphql`
           region
           varietal
           image {
+            url
             fixed(width: 400, height: 400) {
               ...GatsbyDatoCmsFixed
             }
