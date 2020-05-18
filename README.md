@@ -1,13 +1,12 @@
-<h3 align="center">East One Coffee Roasters</h3>
+<h1 align="center">East One Coffee Roasters</h1>
 
 <p align="center">E-commerce site for a coffee shop and roastery in Carroll Gardens, Brooklyn
+    <br/>
     <br/>
     <a href="https://east-one.netlify.app/">View Live Demo</a>
 </p>
 
-## About The Project
-
-### Built With
+## Technology Stack
 
 - [Gatsby](https://www.gatsbyjs.org/)
 - [React](https://reactjs.org/)
@@ -16,11 +15,7 @@
 - [Snipcart](https://snipcart.com/)
 - [Netlify](https://netlify.com/)
 
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
-### Installation & Usage
+## Installation & Usage
 
 To run this project locally, install the dependencies of this project:
 
@@ -76,6 +71,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@luke_waring](https://twitter.com/luke_waring)
+Luke Waring - [@luke_waring](https://twitter.com/luke_waring)
 
 Project Link: [https://github.com/lukewaring/east-one](https://github.com/lukewaring/east-one)
