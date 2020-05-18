@@ -1,9 +1,9 @@
 <h1 align="center">East One Coffee Roasters</h1>
 
-<p align="center">E-commerce site for a coffee shop and roastery in Carroll Gardens, Brooklyn
+<p>E-commerce site for a coffee shop and roastery in Carroll Gardens, Brooklyn. The primary inspiration for this project was to improve page load times and overall performance for users while providing ease-of-use and low costs for the business. According to <a href="https://lighthouse-metrics.com/">Lighthouse Metrics</a>, the site is currently scoring 100/100 for overall performance while the old site scores 6/100.
     <br/>
     <br/>
-    <a href="https://east-one.netlify.app/">View Live Demo</a>
+    <a href="https://east-one.netlify.app/" align="center">View Live Demo</a>
 </p>
 
 ## Technology Stack
@@ -35,7 +35,7 @@ Then, to run this website in development mode (with live-reload):
 gatsby develop
 ```
 
-To build the final, production ready static website:
+To build the final, production-ready static website:
 
 ```
 gatsby build
@@ -54,6 +54,7 @@ The final result will be saved in the `public` directory.
 - Optimize styling for mobile and additional screen sizes
 - Build out additional pages (Locations, Wholesale, etc.)
 - Customize Snipcart styles
+- Continue to optimize performance, accessibility and SEO
 
 ## Contributing
 
