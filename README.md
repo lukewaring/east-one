@@ -8,19 +8,19 @@
 
 ## Technology Stack
 
-- [Gatsby](https://www.gatsbyjs.org/)
+- [Gatsby](https://gatsbyjs.org/)
 - [React](https://reactjs.org/)
-- [GraphQL](http://graphql.org/)
-- [DatoCMS](https://www.datocms.com/)
+- [GraphQL](https://graphql.org/)
+- [DatoCMS](https://datocms.com/)
 - [Snipcart](https://snipcart.com/)
 - [Netlify](https://netlify.com/)
 
 ## Installation & Usage
 
-To run this project locally, install the dependencies of this project:
+To run this project locally, install its dependencies:
 
 ```
-yarn install
+npm install
 ```
 
 Add an `.env` file containing the read-only API token of your DatoCMS site:
@@ -32,13 +32,13 @@ echo 'DATO_API_TOKEN=abc123' >> .env
 Then, to run this website in development mode (with live-reload):
 
 ```
-yarn develop
+gatsby develop
 ```
 
 To build the final, production ready static website:
 
 ```
-yarn build
+gatsby build
 ```
 
 The final result will be saved in the `public` directory.
