@@ -1,10 +1,9 @@
 <h1 align="center">East One Coffee Roasters</h1>
 
 <p>E-commerce site for a coffee shop and roastery in Carroll Gardens, Brooklyn. The primary inspiration for this project was to improve page load times and overall performance for users while providing ease-of-use and low costs for the business. According to <a href="https://lighthouse-metrics.com/">Lighthouse Metrics</a>, the site is currently scoring 100/100 for overall performance while the old site scores 6/100.
-    <br/>
-    <br/>
-    <a href="https://east-one.netlify.app/" align="center">View Live Demo</a>
 </p>
+
+<p align="center"><a href="https://east-one.netlify.app/">View Live Demo</a></p>
 
 ## Technology Stack
 
