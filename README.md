@@ -45,8 +45,8 @@ The final result will be saved in the `public` directory.
 ## Features
 
 - Users can view information about the business and its products
-- Users can purchase coffee through the Buy Coffee page and individual product pages
-- Business owner pays no fixed costs to operate the site and only a 2% Snipcart fee on purchases
+- Users can purchase coffee through the "Buy Coffee" page and individual product pages
+- Business owner pays no fixed costs to operate the site and a 2% Snipcart fee on sales
 
 ## Roadmap
 
